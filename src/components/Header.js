@@ -3,7 +3,9 @@ import Logo from './Logo';
 const Header = () => {
    return (
       <header className="header">
-         <Logo />
+         <div className="header-logo">
+            <Logo />
+         </div>
          <ul className="header-list">
             <li>
                <a href="/">Home</a>
