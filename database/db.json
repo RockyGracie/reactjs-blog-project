@@ -1,0 +1,16 @@
+{
+   "posts": [
+      {
+         "id": 1,
+         "title": "Some title",
+         "author": "Some author",
+         "body": "Some body"
+      },
+      {
+         "id": 2,
+         "title": "Another title",
+         "author": "Another author",
+         "body": "Another body"
+      }
+   ]
+}
