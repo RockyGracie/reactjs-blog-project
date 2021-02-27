@@ -1,4 +1,5 @@
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
    return (
@@ -8,13 +9,13 @@ const Header = () => {
          </div>
          <ul className="header-list">
             <li>
-               <a href="/">Home</a>
+               <Link to="/">Home</Link>
             </li>
             <li>
-               <a href="/">About Us</a>
+               <Link to="/about">About Us</Link>
             </li>
             <li>
-               <a href="/">Contact Us</a>
+               <Link to="/contact">Contact Us</Link>
             </li>
             <li>
                <a href="/">New Post</a>

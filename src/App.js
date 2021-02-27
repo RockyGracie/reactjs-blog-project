@@ -1,8 +1,11 @@
-import './App.css'
+import './App.css';
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header';
 import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
 
@@ -18,10 +21,24 @@ function App() {
   useEffect(() => fetchData(), []);
 
   return (
-    <div className="App">
-      <Header />
-      <Home posts={posts} />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <div className="home">
+          <Switch>
+            <Route exact path="/">
+              <Home posts={posts} />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 };
 
