@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import NewPost from './components/NewPost';
 
 function App() {
 
@@ -34,6 +35,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <Contact />
+            </Route>
+            <Route path="/newpost">
+              <NewPost />
             </Route>
           </Switch>
         </div>
