@@ -65,16 +65,22 @@ body {
 }
 
 .post {
-   margin-bottom: 10px;
    padding: 1.5rem 2.5rem;
+   margin-bottom: 10px;
+}
+
+.post a { 
+   text-decoration: none;
    cursor: pointer;
 }
+
+.post a:visited { color: #111 }
 
 .post:hover { box-shadow: 1px 1px 4px rgba(0, 0, 0, .2); }
 
 .post h3 {
    color: #43a593;
-   font-size: 1.3rem;
+   font-size: 25px;
    margin-bottom: 5px;
 }
 
@@ -116,4 +122,21 @@ body {
    width: 100%;
    padding: 5px;
    margin-bottom: 1rem;
+}
+
+.post-view h3 {
+   font-size: 25px;
+   color:#43a593;
+   margin: 0 0 5px 1rem;
+}
+
+.post-view .author { 
+   color: #333;
+   font-weight: 600;
+   margin: 0 0 2rem 1rem;
+}
+
+.post-view .body {
+   line-height: 1.5rem;
+   margin-left: 2rem;
 }

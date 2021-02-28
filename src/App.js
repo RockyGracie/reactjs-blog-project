@@ -7,20 +7,33 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import NewPost from './components/NewPost';
+import PostView from './components/PostView';
 
 function App() {
 
   const [posts, setPosts] = useState([]);
-  
-  const fetchData = async () => {
-    const res = await fetch('http://localhost:8000/posts');
-    const data = await res.json();
-    
-    setPosts(data);
-  };
+  const [error, setError] = useState(null);
 
-  useEffect(() => fetchData(), []);
+  useEffect(() => {
+    try {
+      const fetchData = async () => {
+        const res = await fetch('http://localhost:8000/posts');
 
+        if (!res.ok) throw Error('Could not fetch data');
+
+        const data = await res.json();
+        
+        setPosts(data);
+      };
+
+      fetchData()
+    } catch (err) {
+      console.error(err);
+      setError(err.message);
+    };
+  }, []);
+
+  console.log(error)
   return (
     <Router>
       <div className="App">
@@ -28,7 +41,10 @@ function App() {
         <div className="home">
           <Switch>
             <Route exact path="/">
-              <Home posts={posts} />
+              <Home 
+                posts={posts}
+                error={error}
+              />
             </Route>
             <Route path="/about">
               <About />
@@ -38,6 +54,12 @@ function App() {
             </Route>
             <Route path="/newpost">
               <NewPost />
+            </Route>
+            <Route path="/posts/:id">
+              <PostView 
+                posts={posts} 
+                setPosts={setPosts}
+              />
             </Route>
           </Switch>
         </div>
