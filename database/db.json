@@ -1,16 +1,3 @@
 {
-   "posts": [
-      {
-         "id": 1,
-         "title": "Some title",
-         "author": "Mario Bro",
-         "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae nemo suscipit inventore! Vero, omnis pariatur. Cupiditate modi, blanditiis, possimus aperiam numquam asperiores deleniti, quisquam aliquid earum quod voluptatum cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae nemo suscipit inventore! Vero, omnis pariatur. Cupiditate modi, blanditiis, possimus aperiam numquam asperiores deleniti, quisquam aliquid earum quod voluptatum cumque."
-      },
-      {
-         "id": 2,
-         "title": "Another title",
-         "author": "Luigi Bro",
-         "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae nemo suscipit inventore! Vero, omnis pariatur. Cupiditate modi, blanditiis, possimus aperiam numquam asperiores deleniti, quisquam aliquid earum quod voluptatum cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae nemo suscipit inventore! Vero, omnis pariatur. Cupiditate modi, blanditiis, possimus aperiam numquam asperiores deleniti, quisquam aliquid earum quod voluptatum cumque."
-      }
-   ]
+  "posts": []
 }

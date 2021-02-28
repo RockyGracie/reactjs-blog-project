@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import NewPost from './components/NewPost';
 import PostView from './components/PostView';
 
+
 function App() {
 
   const [posts, setPosts] = useState([]);
@@ -33,7 +34,6 @@ function App() {
     };
   }, []);
 
-  console.log(error)
   return (
     <Router>
       <div className="App">
@@ -43,6 +43,7 @@ function App() {
             <Route exact path="/">
               <Home 
                 posts={posts}
+                setPosts={setPosts}
                 error={error}
               />
             </Route>
@@ -53,7 +54,10 @@ function App() {
               <Contact />
             </Route>
             <Route path="/newpost">
-              <NewPost />
+              <NewPost 
+                posts={posts}
+                setPosts={setPosts}
+              />
             </Route>
             <Route path="/posts/:id">
               <PostView 
