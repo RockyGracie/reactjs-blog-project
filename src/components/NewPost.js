@@ -13,6 +13,8 @@ const NewPost = ({ posts, setPosts }) => {
    const postRequest = async (e) => {
       e.preventDefault();
 
+      setIsPending(true);
+
       const newPost = { title, author, body };
 
       const res = await fetch('http://localhost:8000/posts', {
@@ -29,6 +31,7 @@ const NewPost = ({ posts, setPosts }) => {
       setAuthor('');
       setBody('');
 
+      setIsPending(false);
    };
 
    return (
@@ -65,7 +68,7 @@ const NewPost = ({ posts, setPosts }) => {
                   onChange={(e) => setBody(e.target.value)}
                />
             </div>
-            {isPending && <button type="submit" disabled>Wait...</button>}
+            {isPending && <button type="submit" disabled style={{ opacity: '.5' }}>Wait...</button>}
             {!isPending && <button type="submit">Add Post</button>}
          </form>
       </div>

@@ -8,6 +8,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import NewPost from './components/NewPost';
 import PostView from './components/PostView';
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -64,6 +65,9 @@ function App() {
                 posts={posts} 
                 setPosts={setPosts}
               />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </div>
