@@ -9,7 +9,6 @@ const NewPost = ({ posts, setPosts }) => {
    const [isPending, setIsPending] = useState(false);
 
    const history = useHistory();
-   console.log(history)
 
    const postRequest = async (e) => {
       e.preventDefault();
