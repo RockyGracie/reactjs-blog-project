@@ -11,4 +11,4 @@ The following techs were used in the application construction:
 
 - [React](https://pt-br.reactjs.org/)
 - [React Router](https://reactrouter.com/)
-- [JSON Server] (https://www.npmjs.com/package/json-server)
+- [JSON Server](https://www.npmjs.com/package/json-server)
